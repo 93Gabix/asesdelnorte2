@@ -17,8 +17,17 @@
             color: white;
             min-height: 100vh;
             position: relative;
+            animation: backgroundPulse 3s infinite;
         }
+
+
+           @keyframes backgroundPulse {
+            0% { background-color: rgba(0, 0, 0, 0.7); }
+            50% { background-color: rgba(98, 14, 155, 0.3); }
+            100% { background-color: rgba(0, 0, 0, 0.7); }
+          }
         
+
         body::before {
             content: "";
             position: absolute;
