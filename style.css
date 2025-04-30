@@ -1,244 +1,283 @@
-  * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-            
-        }
-        
-        body {
-            background-image: url('./img/fondo.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            backdrop-filter: blur(5px);
-            z-index: -1;
-            background-blend-mode: overlay;
-            color: white;
-            min-height: 100vh;
-            position: relative;
-            animation: backgroundPulse 3s infinite;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
+body {
+    background-image: url('./img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    background-blend-mode: overlay;
+    color: white;
+    min-height: 100vh;
+    position: relative;
+    animation: backgroundPulse 3s infinite;
+}
 
-           @keyframes backgroundPulse {
-            0% { background-color: rgba(0, 0, 0, 0.7); }
-            50% { background-color: rgba(98, 14, 155, 0.3); }
-            100% { background-color: rgba(0, 0, 0, 0.7); }
-          }
-        
+@keyframes backgroundPulse {
+    0% { background-color: rgba(0, 0, 0, 0.7); }
+    50% { background-color: rgba(98, 14, 155, 0.3); }
+    100% { background-color: rgba(0, 0, 0, 0.7); }
+}
 
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: -1;
-        }
-        
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            background-color: rgba(0, 0, 0 / 25%);
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo {
-            width: 100px;
-            height: auto;
-            margin-right: 1rem;
-        }
-        
-        .publicidad-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            margin-left: 1rem;
-            margin-right: 1rem;
-        }
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
 
-        .publicidad-img{
-            width: 300px;
-            border-radius: 1rem;
-            border: 2px solid white;
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
-            transition: all 0.3s ease;
-            object-fit: cover;
-            object-position: center;
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.25);
+}
 
-        .publicidad-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
-            object-fit: cover;
-            object-position: center;
-            transition: all 0.3s ease;
+.logo-container {
+    display: flex;
+    align-items: center;
+}
 
-        }
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+}
 
-        .header{
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-            background-color: rgba(0, 0, 0, 0.253);
-            flex-direction: column;
-        }
-        .whatsapp-link {
-            width: 500px;
-            display: flex;
-            align-items: center;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            background-color: #25D366;
-            transition: all 0.3s ease;
-            justify-content: space-evenly;
-        }
+.publicidad-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
 
-        .whatsapp-link:hover {
-            background-color: #128C7E;
-        }
-        
-        .whatsapp-icon {
-            width: 24px;
-            height: 24px;
-            margin-right: 0.5rem;
-        }
-        
-        main {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: gold;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
-        }
-        
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: linear-gradient(to right, #f7941d, #f1c40f);
-            color: #000;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
-            transition: all 0.3s ease;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.7);
-        }
-        
-        .btn:active {
-            transform: translateY(1px);
-        }
-        
-        .counter {
-            font-size: 1rem;
-            color: #f1c40f;
-            margin-left: 1rem;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 215, 0, 0.3);
-        }
-        
-        .card-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 3rem;
-        }
-        
-        .card-icon {
-            font-size: 3rem;
-            margin: 0 0.5rem;
-            color: gold;
-        }
-        
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 1rem 0.5rem;
-            }
-            
-            .logo-container {
-                margin-bottom: 1rem;
-            }
+.publicidad-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 1rem;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    transition: all 0.3s ease;
+    object-fit: cover;
+    object-position: center;
+}
 
-            .publicidad-container {
-                flex-direction: column;
-                align-items: center;
-            }
+.publicidad-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+    transition: all 0.3s ease;
+}
 
-            
-            #clickCounter {
-                margin: 0.8rem 0 0 0;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            .btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 1rem;
-            }
-            
-            .card-icons {
-                flex-wrap: wrap;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .logo {
-                width: 120px;
-            }
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.253);
+    flex-direction: column;
+}
 
-            .publicidad-container {
-                flex-direction: column;
-                align-items: center;
+.whatsapp-link {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    background-color: #25D366;
+    transition: all 0.3s ease;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
 
-            }
-            
-            h1 {
-                font-size: 1.5rem;
-            }
-            
-            p {
-                font-size: 1rem;
-            }
-            
-            .btn {
-                padding: 0.7rem 1.2rem;
-                font-size: 0.9rem;
-            }
-        }
+.whatsapp-link:hover {
+    background-color: #128C7E;
+}
+
+.whatsapp-link.clicked {
+    transform: scale(0.95);
+    background-color: #128C7E;
+}
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: gold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #f7941d, #f1c40f);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.7);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.counter {
+    font-size: 1rem;
+    color: #f1c40f;
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    display: inline-block;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: gold;
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+    }
+    
+    .logo-container {
+        margin-bottom: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Small devices (phones) */
+@media (max-width: 576px) {
+    .logo {
+        width: 80px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .whatsapp-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+    }
+    
+    .whatsapp-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .card-icon {
+        font-size: 2.5rem;
+    }
+}
+
+/* Extra small devices (iPhone X and smaller) */
+@media (max-width: 375px) {
+    header {
+        padding: 0.5rem;
+    }
+    
+    .logo {
+        width: 60px;
+        margin-right: 0.5rem;
+    }
+    
+    .publicidad-container {
+        margin: 0.5rem;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .whatsapp-link {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.7rem;
+    }
+    
+    .whatsapp-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .card-icon {
+        font-size: 2rem;
+    }
+}
